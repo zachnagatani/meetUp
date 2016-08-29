@@ -12,6 +12,11 @@ meetUp.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: 'templates/dashboard.html',
 			controller: 'dashboardController'
 		})
+		.state('dashboard.create', {
+			url: '/create',
+			templateUrl: 'templates/createEvent.html',
+			controller: 'createEventController'
+		})
 });
 
 
