@@ -1,10 +1,12 @@
 meetUp.controller('dashboardController', function($scope, $state) {
-	$('#myModal').modal();
-	
 	$scope.createEvent = createEvent;
+	$scope.editEvent = editEvent;
 
 	function createEvent() {
 		$state.go('dashboard.create');
-		$('#myModal').modal();
+	};
+
+	function editEvent() {
+		$state.go('dashboard.edit');
 	};
 });
