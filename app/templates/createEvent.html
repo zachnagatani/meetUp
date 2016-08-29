@@ -4,10 +4,75 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title text-center" id="myModalLabel">New Event</h4>
       </div>
       <div class="modal-body">
-        ...
+      	<div class="container container-modal">
+	      	<form action="">
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="event-name">Event Name</label>
+			      			<input type="text" class="form-control event-name" id="event-name" name="event-name" required>
+			      		</div>      				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="type">Type of Event</label>
+			      			<input type="text" class="type form-control" id="type" name="type" placeholder="Birthday Party, Baby Shower, etc." required>
+			      		</div>      				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="host">Who's hosting this event?</label>
+			      			<input type="text" class="host form-control" id="host" name="host" placeholder="A person or organization's name" autocomplete required>
+			      		</div>      				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="location">Where is the event taking place?</label>
+			      			<input type="text" class="location form-control" id="location" name="location" placeholder="San Jose, CA" autocomplete required>
+			      		</div>      				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="start-date">When does the event start?</label>
+			      			<input type="datetime-local" class="start-date form-control" id="start-date" name="start-date" required>
+			      		</div>     				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-6 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="end-date">When does the event end?</label>
+			      			<input type="datetime-local" class="end-date form-control" id="end-date" name="end-date" required>
+			      		</div>      				
+	      			</div>
+	      		</div>
+
+	      		<div class="row row-modal">
+	      			<div class="col-xs-8 col-xs-offset-2">
+			      		<div class="input-group">
+			      			<label for="guestlist">Who's invited?</label>
+			      			<textarea name="guestlist" id="guestlist" cols="30" rows="10" placeholder="John Doe, Jane Doe" class="guestlist form-control" cols="40"></textarea>
+			      		</div>      				
+	      			</div>
+	      		</div>      		
+	      	</form>
+	  	</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
