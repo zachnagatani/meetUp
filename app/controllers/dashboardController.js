@@ -8,7 +8,7 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 				$scope.events.push(event);
 			});
 		});
-		
+
 	function getEvents() {
 		return $http.get('/events.json')
 	};
@@ -20,4 +20,8 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 	function editEvent() {
 		$state.go('dashboard.edit');
 	};
+
+	$scope.$on('newEvent', function(event, newEvent) {
+		console.log(newEvent);
+	});
 });

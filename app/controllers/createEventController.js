@@ -8,7 +8,10 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 
 		});
 
-		$scope.eventName = '';
+		// Initialize as empty string for two-way binding in event fields
+		$scope.event = {};
+
+		$scope.saveEvent = saveEvent;
 
 		$scope.close = close;
 
@@ -18,5 +21,10 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 			$timeout(function(){
 				$state.go('dashboard');
 			}, 200);
+		};
+
+		function saveEvent() {
+			$scope.$emit('newEvent', $scope.event);
+			$state.go('dashboard');
 		};
 });
