@@ -41,6 +41,7 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 
 	function confirmDelete() {
 		$('#alert-modal').modal('hide');
-		$scope.events.splice($scope.event, 1);
+		let index = $scope.events.indexOf($scope.event);
+		$scope.events.splice(index, 1);
 	};
 });

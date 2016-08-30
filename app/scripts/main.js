@@ -1,4 +1,4 @@
-var meetUp = angular.module('meetUp', ['ui.router']);
+var meetUp = angular.module('meetUp', ['ui.router', 'ngMessages']);
 
 meetUp.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider

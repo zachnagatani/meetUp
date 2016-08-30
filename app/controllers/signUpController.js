@@ -4,7 +4,7 @@
 
 		// Function to submit sign up form and transition to dashboard
 		$scope.submit = function submit() {
-			$('#sign-up').on('submit', function() {
+			$('#signUp').on('submit', function() {
 				$state.go('dashboard');
 			});
 		}
