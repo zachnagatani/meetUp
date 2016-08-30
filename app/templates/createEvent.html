@@ -41,35 +41,53 @@
 	      			<div class="col-xs-6 col-xs-offset-2">
 			      		<div class="input-group">
 			      			<label for="location">Where is the event taking place?</label>
-			      			<input type="text" class="location form-control" id="location" name="location" placeholder="San Jose, CA" ng-model="event.location" autocomplete required>
+			      			<input type="text" class="location form-control" id="location" name="location" placeholder="777 Main St. San Jose, CA" ng-model="event.location" autocomplete required>
 			      		</div>      				
 	      			</div>
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
+	      			<div class="col-xs-4 col-xs-offset-2">
 			      		<div class="input-group">
-			      			<label for="start-date">When does the event start?</label>
-			      			<input type="datetime-local" class="start-date form-control" id="start-date" name="start-date" ng-model="event.startDate" required>
+			      			<label for="start-date">Event Start Date</label>
+			      			<input type="date" class="start-date form-control" id="start-date" name="start-date" ng-model="event.startDate" required>
 			      		</div>     				
 	      			</div>
+
+	      			<div class="col-xs-4">
+			      		<div class="input-group">
+			      			<label for="start-time">Event Start Time</label>
+			      			<input type="time" class="start-time form-control" id="start-time" name="start-time" ng-model="event.startTime" required>
+			      		</div>     				
+	      			</div>	      			
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
+	      			<div class="col-xs-4 col-xs-offset-2">
 			      		<div class="input-group">
-			      			<label for="end-date">When does the event end?</label>
-			      			<input type="datetime-local" class="end-date form-control" id="end-date" name="end-date" ng-model="event.endDate" required>
+			      			<label for="end-date">Event End Date</label>
+			      			<input type="date" class="end-date form-control" id="end-date" name="end-date" ng-model="event.endDate">
 			      		</div>      				
 	      			</div>
+
+	      			<div class="col-xs-4">
+			      		<div class="input-group">
+			      			<label for="end-time">Event End Date</label>
+			      			<input type="time" class="end-time form-control" id="end-time" name="end-time" ng-model="event.endTime" required>
+			      		</div>      				
+	      			</div>	      			
 	      		</div>
 
 	      		<div class="row row-modal">
 	      			<div class="col-xs-8 col-xs-offset-2">
-			      		<div class="input-group">
+<!-- 			      		<div class="input-group">
 			      			<label for="guestlist">Who's invited?</label>
 			      			<textarea name="guestlist" id="guestlist" cols="30" rows="10" placeholder="John Doe, Jane Doe" class="guestlist form-control" cols="40" ng-model="event.description"></textarea>
-			      		</div>      				
+			      		</div> -->
+			      		<div class="input-group">
+			      			<label for="description">Description of Event</label>
+			      			<textarea name="description" id="description" cols="30" rows="10" placeholder="John Doe, Jane Doe" class="description form-control" cols="40" ng-model="event.description"></textarea>
+			      		</div>        				
 	      			</div>
 	      		</div>      		
 	      	</form>
