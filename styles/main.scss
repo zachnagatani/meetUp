@@ -1,0 +1,19 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// Create Events
+.container-modal {
+	width: 100%;
+}
+
+.guestlist, .description {
+	resize: none;
+	width: 100%;
+}
+
+.row-modal {
+	padding-bottom: 10px;
+}

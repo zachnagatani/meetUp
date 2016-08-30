@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        meetUp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center lead">Sign Up</div>
+        <div class="panel-body">
+          <form method="POST" id="signUp" name="signUp">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group" ng-class="{ 'has-error': signUp.name.$invalid && signUp.name.$dirty}">
+                  <label for="name">Name</label>
+                  <input class="form-control" type="text" name="name" id="name" placeholder="Zach Nagatani" ng-model="name" autocomplete required>
+                  <div ng-messages="signUp.name.$error" ng-show="signUp.name.$touched">
+                    <p class="text-danger lead" ng-message="required">This field is required</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group" ng-class="{ 'has-error': signUp.email.$invalid && signUp.email.$dirty}">
+                  <label for="email">Email</label>
+                  <input class="form-control" type="email" name="email" id="email" ng-model="email" placeholder="example@example.com" autocomplete required>
+                  <div ng-messages="signUp.email.$error" ng-show="signUp.email.$touched">
+                    <p ng-message="required" class="text-danger lead">This field is required</p>
+                    <p ng-message="email" class="text-danger lead">Please enter a valid email address</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group" ng-class="{ 'has-error': signUp.password.$invalid && signUp.password.$dirty}">
+                  <label for="password">Password</label>
+                  <input class="form-control" type="password" name="password" id="password" ng-model="password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" required>
+                  <div ng-messages="signUp.password.$error" ng-show="signUp.password.$dirty">
+                    <p ng-message="required" class="text-danger lead">This field is required</p>
+                    <p ng-message="pattern" class="text-danger lead">Your password must contain at least uppercase letter, one lowercase letter, and one number, with no special characters.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-xs-offset-8"><input type="submit" class="btn btn-block btn-primary" ng-disabled="signUp.$invalid" ng-click="submit()"></div>
+            </div>
+          </form>
+        </div>
+      </div>            
+    </div>
+  </div>
+</div>
