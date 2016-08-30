@@ -24,7 +24,7 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 		};
 
 		function saveEvent() {
-			$('#create-event-form').on('submit', function() {
+			$('#createEventForm').on('submit', function() {
 				console.log($scope.event);
 				$scope.$emit('newEvent', $scope.event);
 				$('#create-modal').modal('hide');

@@ -2,6 +2,11 @@ var meetUp = angular.module('meetUp', ['ui.router', 'ngMessages']);
 
 meetUp.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider
+		.state('root'. {
+			url: '/',
+			templateURL: '/index.html',
+			controller: 'mainController'
+		})
 		.state('signup', {
 			url:'/signup',
 			templateUrl: 'templates/signup.html',

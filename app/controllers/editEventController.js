@@ -26,7 +26,7 @@ meetUp.controller('editEventController', function($scope, $state, $timeout) {
 		};
 
 		function saveEdit() {
-			$('#edit-event-form').on('submit', function() {
+			$('#editEventForm').on('submit', function() {
 				$('#edit-modal').modal('hide');
 				$timeout(function(){
 					$state.go('dashboard');
