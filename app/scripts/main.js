@@ -22,7 +22,8 @@ meetUp.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: 'templates/editEvent.html',
 			controller: 'editEventController',
 			params: {
-				event: null
+				event: null,
+				eventSnapshot: null
 			}
 		});
 });

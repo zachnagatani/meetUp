@@ -1,6 +1,9 @@
 meetUp.controller('dashboardController', function($scope, $state, $http) {
 	$scope.createEvent = createEvent;
 	$scope.editEvent = editEvent;
+	$scope.deleteEvent = deleteEvent;
+	$scope.confirmDelete = confirmDelete;
+	$scope.event = null;
 	$scope.events = [];
 	getEvents()
 		.then(function(response){
@@ -23,9 +26,21 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 	});
 
 	function editEvent(event) {
+		console.log(event);
 		$state.go('dashboard.edit', {
 			id: event.id,
-			event: event
+			event: event,
+			eventSnapshot: event
 		});
+	};
+
+	function deleteEvent(event) {
+		$('#alert-modal').modal();
+		$scope.event = event;
+	};
+
+	function confirmDelete() {
+		$('#alert-modal').modal('hide');
+		$scope.events.splice($scope.event, 1);
 	};
 });

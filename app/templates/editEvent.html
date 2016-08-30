@@ -1,13 +1,13 @@
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center" id="myModalLabel">Edit {{ event.name }}</h4>
+        <h4 class="modal-title text-center" id="myModalLabel">Editing {{ event.name }}</h4>
         <h4 class="modal-title text-center" id="myModalLabel" ng-if="!event.name">Edit Event</h4>
       </div>
-	  <form method="POST" id="create-event-form">
+	  <form method="POST" id="edit-event-form">
       	<div class="modal-body">
       		<div class="container container-modal">
 	      		<div class="row row-modal">
@@ -93,8 +93,8 @@
 	  		</div>
       	</div>
       	<div class="modal-footer">
-        	<button type="button" class="btn btn-default" ng-click="close()">Close</button>
-        	<input type="submit" class="btn btn-primary" ng-click="saveEvent()" value="Save"></input>
+        	<button type="button" class="btn btn-default" ng-click="cancelEdit()">Cancel</button>
+        	<input type="submit" class="btn btn-primary" ng-click="saveEdit()" value="Save"></input>
       	</div>
       </form>
     </div>

@@ -1,9 +1,9 @@
 meetUp.controller('editEventController', function($scope, $state, $timeout) {
 		// Open's the bootstrap modal when route is switched to edit
-		$('#myModal').modal();
+		$('#edit-modal').modal();
 		// Autofocus the first input field after 100ms (HTML5 autofocus)
 		// does not work properly with Bootstrap modal
-		$('#myModal').on('shown.bs.modal', function () {
+		$('#edit-modal').on('shown.bs.modal', function () {
 		    $timeout(function (){
 		        $('#event-name').focus();
 		    }, 100);
@@ -12,14 +12,25 @@ meetUp.controller('editEventController', function($scope, $state, $timeout) {
 
 		// Initialize as empty string for two-way binding in event fields
 		$scope.eventName = '';
-		$scope.close = close;
+		$scope.cancelEdit = cancelEdit;
 		$scope.event = $state.params.event;
+		var eventSnapshot = $state.params.eventSnapshot
+		$scope.saveEdit = saveEdit;
 
 		// Go back to dashboard state
-		function close() {
-			$('#myModal').modal('hide');
+		function cancelEdit() {
+			$('#edit-modal').modal('hide');
 			$timeout(function(){
 				$state.go('dashboard');
 			}, 200);
+		};
+
+		function saveEdit() {
+			$('#edit-event-form').on('submit', function() {
+				$('#edit-modal').modal('hide');
+				$timeout(function(){
+					$state.go('dashboard');
+				}, 200);
+			});
 		};
 });

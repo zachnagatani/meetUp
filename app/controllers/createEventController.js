@@ -1,7 +1,7 @@
 meetUp.controller('createEventController', function($scope, $state, $timeout) {
-		$('#myModal').modal();
+		$('#create-modal').modal();
 
-		$('#myModal').on('shown.bs.modal', function () {
+		$('#create-modal').on('shown.bs.modal', function () {
 		    setTimeout(function (){
 		        $('#event-name').focus();
 		    }, 100);
@@ -17,7 +17,7 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 
 		// Go back to dashboard state
 		function close() {
-			$('#myModal').modal('hide');
+			$('#create-modal').modal('hide');
 			$timeout(function(){
 				$state.go('dashboard');
 			}, 200);
@@ -25,8 +25,9 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 
 		function saveEvent() {
 			$('#create-event-form').on('submit', function() {
+				console.log($scope.event);
 				$scope.$emit('newEvent', $scope.event);
-				$('#myModal').modal('hide');
+				$('#create-modal').modal('hide');
 				$timeout(function(){
 					$state.go('dashboard');
 				}, 200);
