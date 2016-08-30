@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	meetUp.controller('dashboardController', ['$scope', '$state', '$timeout', function($scope, $state, $http) {
+	meetUp.controller('dashboardController', ['$scope', '$state', '$http', function($scope, $state, $http) {
 		$scope.createEvent = createEvent;
 		$scope.editEvent = editEvent;
 		$scope.deleteEvent = deleteEvent;
