@@ -1,4 +1,4 @@
-(function(){
+(function() {
 	meetUp.controller('signUpController', ['$scope', '$state', function($scope, $state){
 		// $scope.submit = submit;
 
