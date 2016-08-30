@@ -7,9 +7,9 @@
         <h4 class="modal-title text-center" id="myModalLabel">{{ event.name }}</h4>
         <h4 class="modal-title text-center" id="myModalLabel" ng-if="!event.name">New Event</h4>
       </div>
-      <div class="modal-body">
-      	<div class="container container-modal">
-	      	<form action="">
+	  <form method="POST" id="create-event-form">
+      	<div class="modal-body">
+      		<div class="container container-modal">
 	      		<div class="row row-modal">
 	      			<div class="col-xs-6 col-xs-offset-2">
 			      		<div class="input-group">
@@ -90,13 +90,13 @@
 			      		</div>        				
 	      			</div>
 	      		</div>      		
-	      	</form>
-	  	</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" ng-click="close()">Close</button>
-        <button type="button" class="btn btn-primary" ng-click="saveEvent()">Save changes</button>
-      </div>
+	  		</div>
+      	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-default" ng-click="close()">Close</button>
+        	<input type="submit" class="btn btn-primary" ng-click="saveEvent()" value="Save"></input>
+      	</div>
+      </form>
     </div>
   </div>
 </div>

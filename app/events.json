@@ -1,6 +1,6 @@
 [{
 	"id": "1",
-	"title": "Claire's Grad Party",
+	"name": "Claire's Grad Party",
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",
@@ -11,7 +11,7 @@
 	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
 }, {
 	"id": "1",
-	"title": "Claire's Grad Party",
+	"name": "Claire's Grad Party",
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",
@@ -23,7 +23,7 @@
 	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
 }, {
 	"id": "1",
-	"title": "Claire's Grad Party",
+	"name": "Claire's Grad Party",
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",

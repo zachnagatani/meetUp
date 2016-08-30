@@ -22,6 +22,6 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 	};
 
 	$scope.$on('newEvent', function(event, newEvent) {
-		console.log(newEvent);
+		$scope.events.push(newEvent);
 	});
 });

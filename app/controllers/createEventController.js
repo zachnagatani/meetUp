@@ -24,10 +24,12 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 		};
 
 		function saveEvent() {
-			$scope.$emit('newEvent', $scope.event);
-			$('#myModal').modal('hide');
-			$timeout(function(){
-				$state.go('dashboard');
-			}, 200);
+			$('#create-event-form').on('submit', function() {
+				$scope.$emit('newEvent', $scope.event);
+				$('#myModal').modal('hide');
+				$timeout(function(){
+					$state.go('dashboard');
+				}, 200);
+			});
 		};
 });

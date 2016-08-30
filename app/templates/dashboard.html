@@ -17,7 +17,7 @@
 		<div ng-repeat="event in events" class="col-xs-12 col-md-4">
 			<div class="panel panel-default">
 		        <div class="panel-heading text-center lead">
-		        	<h3>{{ event.title }}</h3>
+		        	<h3>{{ event.name}}</h3>
 		        	<p>Hosted by {{ event.host }}</p>
 		        </div>
 		        <div class="panel-body">
@@ -30,14 +30,14 @@
 					    <ul class="list-unstyled" ng-if="event.endDate">
 					    	<li>Type: {{ event.type }}</li>
 					    	<li>Location: {{ event.location }}</li>
-					    	<li>Starts: {{event.startDate }} <small>@</small> {{ event.startTime }}</li>
-					    	<li>Ends: {{ event.endDate }} <small>@</small> {{ event.endTime }}</li>
+					    	<li>Starts: {{event.startDate | date : 'fullDate' }} <small>@</small> {{ event.startTime | date: 'shortTime' }}</li>
+					    	<li>Ends: {{ event.endDate | date : 'fullDate'}} <small>@</small> {{ event.endTime | date: 'shortTime' }}</li>
 					    </ul>
 					    
 					    <ul class="list-unstyled" ng-if="!event.endDate">
 					    	<li>Type: {{ event.type }}</li>
 					    	<li>Location: {{ event.location }}</li>
-					    	<li>From: {{event.startDate }} <small>@</small> {{ event.startTime }} to {{ event.endTime }}</li>
+					    	<li>From: {{event.startDate | date : 'fullDate' }} <small>@</small> {{ event.startTime | date: 'shortTime' }} to {{ event.endTime | date: 'shortTime' }}</li>
 					    </ul>
 					    <p class="list-group-item-text"></p>
 					  </a>
