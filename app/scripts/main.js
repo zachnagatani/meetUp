@@ -18,10 +18,13 @@ meetUp.config(function($stateProvider, $urlRouterProvider){
 			controller: 'createEventController'
 		})
 		.state('dashboard.edit', {
-			url: '/edit',
+			url: '/edit/:id',
 			templateUrl: 'templates/editEvent.html',
-			controller: 'editEventController'
-		})
+			controller: 'editEventController',
+			params: {
+				event: null
+			}
+		});
 });
 
 

@@ -17,11 +17,15 @@ meetUp.controller('dashboardController', function($scope, $state, $http) {
 		$state.go('dashboard.create');
 	};
 
-	function editEvent() {
-		$state.go('dashboard.edit');
-	};
-
 	$scope.$on('newEvent', function(event, newEvent) {
+		newEvent.id = $scope.events.length + 1;
 		$scope.events.push(newEvent);
 	});
+
+	function editEvent(event) {
+		$state.go('dashboard.edit', {
+			id: event.id,
+			event: event
+		});
+	};
 });

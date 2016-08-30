@@ -13,6 +13,7 @@ meetUp.controller('editEventController', function($scope, $state, $timeout) {
 		// Initialize as empty string for two-way binding in event fields
 		$scope.eventName = '';
 		$scope.close = close;
+		$scope.event = $state.params.event;
 
 		// Go back to dashboard state
 		function close() {
