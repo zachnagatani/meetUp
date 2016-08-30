@@ -15,9 +15,23 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="meetUp/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <!-- endbuild -->
-    
+    <style>// Create Events
+        .container-modal {
+            width: 100%;
+        }
+
+        .guestlist, .description {
+            resize: none;
+            width: 100%;
+        }
+
+        .row-modal {
+            padding-bottom: 10px;
+        }
+    </style>
   </head>
   <body ng-controller="mainController">
     <!--[if lt IE 10]>
@@ -43,7 +57,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places?key=AIzaSyDstwW4Ea6RJFKBuw2hj2kHXAcFioor_2o"></script>
-    <script src="/meetUp/bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/meetUp/bower_components/angular/angular.js"></script>
     <script src="/meetUp/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/meetUp/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
