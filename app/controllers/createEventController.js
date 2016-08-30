@@ -25,6 +25,9 @@ meetUp.controller('createEventController', function($scope, $state, $timeout) {
 
 		function saveEvent() {
 			$scope.$emit('newEvent', $scope.event);
-			$state.go('dashboard');
+			$('#myModal').modal('hide');
+			$timeout(function(){
+				$state.go('dashboard');
+			}, 200);
 		};
 });

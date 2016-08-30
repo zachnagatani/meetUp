@@ -1,29 +1,36 @@
-[
-	{
-		"id": "1",
-		"title": "Claire's Grad Party",
-		"startDate": "August 27th, 2016",
-		"endDate": "August 27th, 2016",
-		"startTime": "6PM",
-		"endTime": "10PM",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
-	},
-	{
-		"id": "2",
-		"title": "Zach's Grad Party",
-		"startDate": "Sept 29th, 2016",
-		"endDate": "Sept 30th, 2016",
-		"startTime": "6PM",
-		"endTime": "10PM",
-		"description": "Lore beatae numquam nostrum tempore quisquam possimus molestiae sint aut, error quae nemo."
-	},
-	{
-		"id": "3",
-		"title": "Our Grad Party",
-		"startDate": "August 30th, 2016",
-		"endDate": "August 31th, 2016",
-		"startTime": "6PM",
-		"endTime": "10PM",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi porro provident cum labore quasi ipsum placeat, ut beatae numquam nostrum tempore quisquam possimus molestiae sint aut, error quae nemo."
-	}
-]
+[{
+	"id": "1",
+	"title": "Claire's Grad Party",
+	"host": "Zach",
+	"type": "Grad Party",
+	"location": "San Jose, CA",
+	"startDate": "August 27th, 2016",
+	"startTime": "6PM",
+	"endTime": "10PM",
+	"guestlist": [],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+}, {
+	"id": "1",
+	"title": "Claire's Grad Party",
+	"host": "Zach",
+	"type": "Grad Party",
+	"location": "San Jose, CA",
+	"startDate": "August 27th, 2016",
+	"endDate": "August 27th, 2016",
+	"startTime": "6PM",
+	"endTime": "10PM",
+	"guestlist": [],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+}, {
+	"id": "1",
+	"title": "Claire's Grad Party",
+	"host": "Zach",
+	"type": "Grad Party",
+	"location": "San Jose, CA",
+	"startDate": "August 27th, 2016",
+	"endDate": "August 27th, 2016",
+	"startTime": "6PM",
+	"endTime": "10PM",
+	"guestlist": [],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+}]
