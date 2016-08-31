@@ -25,7 +25,7 @@
 				$('#edit-modal').modal('hide');
 				$timeout(function(){
 					$state.go('dashboard');
-				}, 200);
+				}, 5000);
 			};
 
 			function saveEdit() {
