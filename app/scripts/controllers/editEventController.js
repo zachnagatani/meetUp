@@ -17,8 +17,9 @@
 			$scope.eventName = '';
 			$scope.cancelEdit = cancelEdit;
 			$scope.event = $state.params.event;
-			var eventSnapshot = $state.params.eventSnapshot
 			$scope.saveEdit = saveEdit;
+			$scope.addDescription = false;
+			$scope.toggleAddDescription = toggleAddDescription;
 
 			// Go back to dashboard state
 			function cancelEdit() {
@@ -35,6 +36,10 @@
 						$state.go('dashboard');
 					}, 500);
 				});
+			};
+
+			function toggleAddDescription() {
+				!$scope.addDescription ? $scope.addDescription = true : $scope.addDescription = false;
 			};
 	}]);
 })();

@@ -18,6 +18,10 @@
 
 			$scope.close = close;
 
+			$scope.addDescription = false;
+
+			$scope.toggleAddDescription = toggleAddDescription;
+
 			// Go back to dashboard state
 			function close() {
 				$('#create-modal').modal('hide');
@@ -35,6 +39,10 @@
 						$state.go('dashboard');
 					}, 500);
 				});
+			};
+
+			function toggleAddDescription() {
+				!$scope.addDescription ? $scope.addDescription = true : $scope.addDescription = false;
 			};
 	}]);
 })();
