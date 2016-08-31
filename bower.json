@@ -11,6 +11,21 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
+    },
+    "angular": {
+      "main": "angular/angular.min.js.gzip"
+    },
+    "angular-animate": {
+      "main": "angular-animate.min.js"
+    },
+    "angular-messages": {
+      "main": "angular-messages.min.js"
+    },
+    "angular-ui-router": {
+      "main": "release/angular-ui-router.min.js"
+    },
+    "jquery": {
+      "main": "dist/jquery.min.js"
     }
   },
   "devDependencies": {
@@ -20,6 +35,7 @@
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-ui-router": "^0.3.1",
-    "angular-messages": "^1.5.8"
+    "angular-messages": "^1.5.8",
+    "jquery": "^3.1.0"
   }
 }
