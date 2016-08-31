@@ -33,7 +33,7 @@
 					$('#edit-modal').modal('hide');
 					$timeout(function(){
 						$state.go('dashboard');
-					}, 500);
+					}, 5000);
 				});
 			};
 	}]);
