@@ -3,7 +3,7 @@ var meetUp = angular.module('meetUp', ['ui.router', 'ngMessages']);
 (function() {
 	'use strict';
 
-	meetUp.config(function($stateProvider, $urlRouterProvider){
+	meetUp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 		$stateProvider
 			.state('signup', {
 				url:'/signup',
@@ -29,5 +29,5 @@ var meetUp = angular.module('meetUp', ['ui.router', 'ngMessages']);
 					eventSnapshot: null
 				}
 			});
-	});
+	}]);
 })();

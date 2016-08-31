@@ -1,19 +1,19 @@
 <!-- Modal -->
-<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal">
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center">Editing {{ event.name }}</h4>
-        <h4 class="modal-title text-center" ng-if="!event.name">Edit Event</h4>
+        <h4 class="modal-title text-center" id="myModalLabel">{{ event.name }}</h4>
+        <h4 class="modal-title text-center" id="myModalLabel" ng-if="!event.name">New Event</h4>
       </div>
 	  <form method="POST" id="editEventForm" name="editEventForm">
       	<div class="modal-body">
       		<div class="container container-modal">
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.eventName.$invalid && editEventForm.eventName.$dirty }">
+	      			<div class="col-md-6 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.eventName.$invalid && editEventForm.eventName.$dirty, 'has-success': editEventForm.eventName.$valid }">
 			      			<label for="eventName">Event Name</label>
-			      			<input type="text" class="form-control eventName" id="eventName" name="eventName" ng-model='event.name' required>
+			      			<input type="text" class="form-control eventName" id="eventName" name="eventName" ng-model='event.name' placeholder="Zach's Birthday Party" required>
 			      			<div ng-messages="editEventForm.eventName.$error" ng-show="editEventForm.eventName.$touched">
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      			</div>
@@ -22,8 +22,8 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.type.$invalid && editEventForm.type.$dirty }">
+	      			<div class="col-md-6 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.type.$invalid && editEventForm.type.$dirty, 'has-success': editEventForm.type.$valid }">
 			      			<label for="type">Type of Event</label>
 			      			<input type="text" class="type form-control" id="type" name="type" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
 			      			<div ng-messages="editEventForm.type.$error" ng-show="editEventForm.type.$touched">
@@ -34,8 +34,8 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.host.$invalid && editEventForm.host.$dirty }">
+	      			<div class="col-md-6 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.host.$invalid && editEventForm.host.$dirty, 'has-success': editEventForm.host.$valid }">
 			      			<label for="host">Who's hosting this event?</label>
 			      			<input type="text" class="host form-control" id="host" name="host" placeholder="A person or organization's name" ng-model="event.host" autocomplete required>
 			      		</div> 
@@ -46,8 +46,8 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-6 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.location.$invalid && editEventForm.location.$dirty }">
+	      			<div class="col-md-6 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.location.$invalid && editEventForm.location.$dirty, 'has-success': editEventForm.location.$valid }">
 			      			<label for="location">Where is the event taking place?</label>
 			      			<input type="text" class="location form-control" id="location" name="location" placeholder="777 Main St. San Jose, CA" ng-model="event.location" autocomplete required>
 			      			<div ng-messages="editEventForm.location.$error" ng-show="editEventForm.touched.$touched">
@@ -58,8 +58,8 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-4 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.startDate.$invalid && editEventForm.startDate.$dirty }">
+	      			<div class="col-md-4 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.startDate.$invalid && editEventForm.startDate.$dirty, 'has-success': editEventForm.startDate.$valid }">
 			      			<label for="startDate">Event Start Date</label>
 			      			<input type="date" class="startDate form-control" id="startDate" name="startDate" ng-model="event.startDate" placeholder="2016-01-31" required>
 			      			<div ng-messages="editEventForm.startDate.$error" ng-show="editEventForm.startDate.$touched">
@@ -69,8 +69,8 @@
 			      		</div>     				
 	      			</div>
 
-	      			<div class="col-xs-4">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.startTime.$invalid && editEventForm.startTime.$dirty }">
+	      			<div class="col-md-4">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.startTime.$invalid && editEventForm.startTime.$dirty, 'has-success': editEventForm.startTime.$valid }">
 			      			<label for="startTime">Event Start Time</label>
 			      			<input type="time" class="startTime form-control" id="startTime" name="startTime" ng-model="event.startTime" required>
 			      			<div ng-messages="editEventForm.startTime.$error" ng-show="editEventForm.startTime.$touched">
@@ -82,8 +82,8 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-4 col-xs-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.endDate.$invalid && editEventForm.endDate.$dirty }">
+	      			<div class="col-md-4 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.endDate.$invalid && editEventForm.endDate.$dirty, 'has-success': editEventForm.endDate.$valid }">
 			      			<label for="endDate">Event End Date</label>
 			      			<input type="date" class="endDate form-control" id="endDate" name="endDate" ng-model="event.endDate" placeholder="2016-01-31">
 			      			<div ng-messages="editEventForm.endDate.$error" ng-show="editEventForm.endDate.$touched">
@@ -92,8 +92,8 @@
 			      		</div>      				
 	      			</div>
 
-	      			<div class="col-xs-4">
-			      		<div class="form-group" ng-class="{ 'has-error' : editEventForm.endTime.$invalid && editEventForm.endTime.$dirty }">
+	      			<div class="col-md-4">
+			      		<div class="form-group" ng-class="{ 'has-error' : editEventForm.endTime.$invalid && editEventForm.endTime.$dirty, 'has-success': editEventForm.endTime.$valid }">
 			      			<label for="endTime">Event End Time</label>
 			      			<input type="time" class="endTime form-control" id="endTime" name="endTime" ng-model="event.endTime" required>
 			      			<div ng-messages="editEventForm.endTime.$error" ng-show="editEventForm.endTime.$touched">
@@ -105,14 +105,14 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-xs-8 col-xs-offset-2">
+	      			<div class="col-md-8 col-md-offset-2">
 <!-- 			      		<div class="form-group">
 			      			<label for="guestlist">Who's invited?</label>
 			      			<textarea name="guestlist" id="guestlist" cols="30" rows="10" placeholder="John Doe, Jane Doe" class="guestlist form-control" cols="40" ng-model="event.description"></textarea>
 			      		</div> -->
 			      		<div class="form-group">
 			      			<label for="description">Description of Event</label>
-			      			<textarea name="description" id="description" cols="30" rows="10" placeholder="John Doe, Jane Doe" class="description form-control" cols="40" ng-model="event.description"></textarea>
+			      			<textarea name="description" id="description" rows="10" placeholder="John Doe, Jane Doe" class="description form-control" cols="40" ng-model="event.description"></textarea>
 			      		</div>        				
 	      			</div>
 	      		</div>      		
@@ -120,7 +120,7 @@
       	</div>
       	<div class="modal-footer">
         	<button type="button" class="btn btn-default" ng-click="cancelEdit()">Close</button>
-        	<input type="submit" class="btn btn-primary" ng-click="saveEdit()" value="Save" ng-disabled="editEventForm.$invalid"></input>
+        	<input type="submit" class="btn btn-primary" ng-click="saveEvent()" value="Save" ng-disabled="editEventForm.$invalid"></input>
       	</div>
       </form>
     </div>

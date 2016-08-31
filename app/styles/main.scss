@@ -9,7 +9,7 @@ $icon-font-path: '../fonts/';
 	width: 100%;
 }
 
-.guestlist, .description {
+.guestlist, .description, .interests {
 	resize: none;
 	width: 100%;
 }
@@ -17,3 +17,8 @@ $icon-font-path: '../fonts/';
 .row-modal {
 	padding-bottom: 10px;
 }
+
+.alert-col {
+	margin-bottom: 10px;
+}
+

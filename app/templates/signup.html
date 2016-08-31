@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand">
         meetUp
       </a>
     </div>
@@ -17,11 +17,11 @@
           <form method="POST" id="signUp" name="signUp">
             <div class="row">
               <div class="col-xs-12">
-                <div class="form-group" ng-class="{ 'has-error': signUp.name.$invalid && signUp.name.$dirty}">
+                <div class="form-group" ng-class="{ 'has-error': signUp.name.$invalid && signUp.name.$dirty, 'has-success': signUp.name.$valid}">
                   <label for="name">Name</label>
-                  <input class="form-control" type="text" name="name" id="name" placeholder="Zach Nagatani" ng-model="name" autocomplete required>
+                  <input class="form-control" type="text" name="name" id="name" placeholder="Zach Nagatani" ng-model="name" autofocus autocomplete required>
                   <div ng-messages="signUp.name.$error" ng-show="signUp.name.$touched">
-                    <p class="text-danger lead" ng-message="required">This field is required</p>
+                    <p class="text-danger" ng-message="required">This field is required</p>
                   </div>
                 </div>
               </div>
@@ -29,12 +29,12 @@
 
             <div class="row">
               <div class="col-xs-12">
-                <div class="form-group" ng-class="{ 'has-error': signUp.email.$invalid && signUp.email.$dirty}">
+                <div class="form-group" ng-class="{ 'has-error': signUp.email.$invalid && signUp.email.$dirty, 'has-success': signUp.email.$valid}">
                   <label for="email">Email</label>
                   <input class="form-control" type="email" name="email" id="email" ng-model="email" placeholder="example@example.com" autocomplete required>
                   <div ng-messages="signUp.email.$error" ng-show="signUp.email.$touched">
-                    <p ng-message="required" class="text-danger lead">This field is required</p>
-                    <p ng-message="email" class="text-danger lead">Please enter a valid email address</p>
+                    <p ng-message="required" class="text-danger">This field is required</p>
+                    <p ng-message="email" class="text-danger">Please enter a valid email address</p>
                   </div>
                 </div>
               </div>
@@ -42,16 +42,48 @@
 
             <div class="row">
               <div class="col-xs-12">
-                <div class="form-group" ng-class="{ 'has-error': signUp.password.$invalid && signUp.password.$dirty}">
+                <div class="form-group" ng-class="{ 'has-error': signUp.password.$invalid && signUp.password.$dirty, 'has-success': signUp.password.$valid}">
                   <label for="password">Password</label>
                   <input class="form-control" type="password" name="password" id="password" ng-model="password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" required>
                   <div ng-messages="signUp.password.$error" ng-show="signUp.password.$dirty">
-                    <p ng-message="required" class="text-danger lead">This field is required</p>
-                    <p ng-message="pattern" class="text-danger lead">Your password must contain at least uppercase letter, one lowercase letter, and one number, with no special characters.</p>
+                    <p ng-message="required" class="text-danger">This field is required</p>
+                    <p ng-message="pattern" class="text-danger">Your password must contain at least uppercase letter, one lowercase letter, and one number, with no special characters.</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="optional">Add additional info?</label><br>
+                  <input type="checkbox" name="optional" ng-click="toggleAdditionalInfo()">
+                </div>
+              </div>
+            </div>
+            <section class="addition-info" id="additional-info" ng-show="additionalInfo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group" ng-class="{ 'has-error': signUp.birthday.$invalid && signUp.birthday.$dirty, 'has-success': signUp.birthday.$valid && signUp.birthday.$dirty}">
+                    <label for="birthday">When's your birthday?</label>
+                    <input type="date" class="form-control" name="birthday" id="birthday" ng-model="birthday">
+                    <div ng-messages="signUp.birthday.$error" ng-show="signUp.birthday.$touched">
+                      <p ng-message="date" class="text-danger">Please enter a correct date</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group" ng-class="{ 'has-error': signUp.interests.$invalid && signUp.interests.$dirty, 'has-success': signUp.interests.$valid && signUp.interests.$dirty}">
+                    <label for="interests">List some of your interests!</label>
+                    <textarea name="interests" id="interests" class="interests form-control" cols="40" rows="10" ng-model="interests" placeholder="Baseball, web development, NBA 2K216..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </section>
 
             <div class="row">
               <div class="col-xs-4 col-xs-offset-8"><input type="submit" class="btn btn-block btn-primary" ng-disabled="signUp.$invalid" ng-click="submit()"></div>
