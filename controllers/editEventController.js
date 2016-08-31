@@ -25,7 +25,7 @@
 				$('#edit-modal').modal('hide');
 				$timeout(function(){
 					$state.go('dashboard');
-				}, 5000);
+				}, 500);
 			};
 
 			function saveEdit() {
@@ -33,7 +33,7 @@
 					$('#edit-modal').modal('hide');
 					$timeout(function(){
 						$state.go('dashboard');
-					}, 5000);
+					}, 500);
 				});
 			};
 	}]);
