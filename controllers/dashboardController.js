@@ -16,7 +16,7 @@
 			});
 
 		function getEvents() {
-			return $http.get('/events.json')
+			return $http.get('/meetUp/events.json')
 		};
 
 		function createEvent() {
