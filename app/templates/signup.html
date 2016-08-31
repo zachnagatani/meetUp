@@ -47,7 +47,7 @@
                   <input class="form-control" type="password" name="password" id="password" ng-model="password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" required>
                   <div ng-messages="signUp.password.$error" ng-show="signUp.password.$dirty">
                     <p ng-message="required" class="text-danger">This field is required</p>
-                    <p ng-message="pattern" class="text-danger">Your password must contain at least uppercase letter, one lowercase letter, and one number, with no special characters.</p>
+                    <p ng-message="pattern" class="text-danger">Your password must contain at least one uppercase letter, one lowercase letter, and one number, with no special characters.</p>
                   </div>
                 </div>
               </div>

@@ -21,6 +21,11 @@
 			$scope.addDescription = false;
 			$scope.toggleAddDescription = toggleAddDescription;
 
+			// Go to dashboard when user clicks away from modal
+			$('#edit-modal').on('hidden.bs.modal', function (e) {
+				$state.go('dashboard');
+			});
+
 			// Go back to dashboard state
 			function cancelEdit() {
 				$('#edit-modal').modal('hide');

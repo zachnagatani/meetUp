@@ -22,6 +22,11 @@
 
 			$scope.toggleAddDescription = toggleAddDescription;
 
+			// Go to dashboard when user clicks away from modal
+			$('#create-modal').on('hidden.bs.modal', function (e) {
+				$state.go('dashboard');
+			});
+
 			// Go back to dashboard state
 			function close() {
 				$('#create-modal').modal('hide');
@@ -45,4 +50,5 @@
 				!$scope.addDescription ? $scope.addDescription = true : $scope.addDescription = false;
 			};
 	}]);
+
 })();
