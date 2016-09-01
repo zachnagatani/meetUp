@@ -10,7 +10,7 @@
       	<div class="modal-body">
       		<div class="container container-modal">
 	      		<div class="row row-modal">
-	      			<div class="col-md-6 col-md-offset-2">
+	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.eventName.$invalid && createEventForm.eventName.$dirty, 'has-success': createEventForm.eventName.$valid && createEventForm.eventName.$dirty }">
 			      			<label for="eventName">Event Name</label>
 			      			<input type="text" class="form-control eventName" id="eventName" name="eventName" ng-model='event.name' placeholder="Zach's Birthday Party" required>
@@ -22,7 +22,7 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-md-6 col-md-offset-2">
+	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.type.$invalid && createEventForm.type.$dirty, 'has-success': createEventForm.type.$valid && createEventForm.type.$dirty }">
 			      			<label for="type">Type of Event</label>
 			      			<input list="type" class="type form-control" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
@@ -41,7 +41,7 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-md-6 col-md-offset-2">
+	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.host.$invalid && createEventForm.host.$dirty, 'has-success': createEventForm.host.$valid && createEventForm.host.$dirty }">
 			      			<label for="host">Who's hosting this event?</label>
 			      			<input type="text" class="host form-control" id="host" name="host" placeholder="A person or organization's name" ng-model="event.host" autocomplete required>
@@ -53,7 +53,7 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-md-6 col-md-offset-2">
+	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.location.$invalid && createEventForm.location.$dirty, 'has-success': createEventForm.location.$valid && createEventForm.location.$dirty }">
 			      			<label for="location">Where is the event taking place?</label>
 			      			<input type="text" class="location form-control" id="location" name="location" placeholder="777 Main St. San Jose, CA" ng-model="event.location" autocomplete required>
@@ -65,59 +65,40 @@
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-md-4 col-md-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.startDate.$invalid && createEventForm.startDate.$dirty, 'has-success': createEventForm.startDate.$valid && createEventForm.startDate.$dirty }">
-			      			<label for="startDate">Event Start Date</label>
-			      			<input type="date" class="startDate form-control" id="startDate" name="startDate" ng-model="event.startDate" placeholder="2016-01-31" required>
-			      			<div ng-messages="createEventForm.startDate.$error" ng-show="createEventForm.startDate.$touched">
+	      			<div class="col-md-8 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.start.$invalid && createEventForm.start.$dirty, 'has-success': createEventForm.start.$valid && createEventForm.start.$dirty }">
+			      			<label for="start">When does it start?</label>
+			      			<input type="datetime-local" class="start form-control" id="start" name="start" ng-model="event.start" placeholder="2016-01-31" ng-change="checkDate(createEventForm)"  required>
+			      			<div ng-messages="createEventForm.start.$error" ng-show="createEventForm.start.$touched">
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="date" class="text-danger">Please enter a correct date</p>
-			      			</div>
-			      		</div>     				
-	      			</div>
-
-	      			<div class="col-md-4">
-			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.startTime.$invalid && createEventForm.startTime.$dirty, 'has-success': createEventForm.startTime.$valid && createEventForm.startTime.$dirty}">
-			      			<label for="startTime">Event Start Time</label>
-			      			<input type="time" class="startTime form-control" id="startTime" name="startTime" ng-model="event.startTime" required>
-			      			<div ng-messages="createEventForm.startTime.$error" ng-show="createEventForm.startTime.$touched">
-			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="time" class="text-danger">Please enter a correct time</p>
 			      			</div>
 			      		</div>     				
-	      			</div>	      			
+	      			</div>    			
 	      		</div>
 
 	      		<div class="row row-modal">
-	      			<div class="col-md-4 col-md-offset-2">
-			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.endDate.$invalid && createEventForm.endDate.$dirty, 'has-success': createEventForm.endDate.$valid && createEventForm.endDate.$dirty }">
-			      			<label for="endDate">Event End Date</label>
-			      			<input type="date" class="endDate form-control" id="endDate" name="endDate" ng-model="event.endDate" placeholder="2016-01-31" required>
-			      			<div ng-messages="createEventForm.endDate.$error" ng-show="createEventForm.endDate.$touched">
+	      			<div class="col-md-8 col-md-offset-2">
+			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.end.$invalid && createEventForm.end.$dirty, 'has-success': createEventForm.end.$valid && createEventForm.end.$dirty }">
+			      			<label for="end">When does it end?</label>
+			      			<input type="datetime-local" class="end form-control" id="end" name="end" ng-model="event.end" placeholder="2016-01-31" ng-change="checkDate(createEventForm)" required>
+			      			<div ng-messages="createEventForm.end.$error" ng-show="createEventForm.end.$touched">
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="date" class="text-danger">Please enter a correct date</p>
-			      			</div>			   
-			      		</div>      				
-	      			</div>
-
-	      			<div class="col-md-4">
-			      		<div class="form-group" ng-class="{ 'has-error' : createEventForm.endTime.$invalid && createEventForm.endTime.$dirty, 'has-success': createEventForm.endTime.$valid && createEventForm.endTime.$dirty }">
-			      			<label for="endTime">Event End Time</label>
-			      			<input type="time" class="endTime form-control" id="endTime" name="endTime" ng-model="event.endTime" required>
-			      			<div ng-messages="createEventForm.endTime.$error" ng-show="createEventForm.endTime.$touched">
-			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="time" class="text-danger">Please enter a correct time</p>
-			      			</div>					      			
+			      				<p ng-message="endDate" class="text-danger">End of event cannot be before start of event</p>
+			      			</div>			   
 			      		</div>      				
 	      			</div>	      			
 	      		</div>
 
 	      		<div class="row row-modal">
 	      			<div class="col-md-8 col-md-offset-2">
-	      				<div class="form-group" ng-class="{ 'has-error' : createEventForm.guestList.$invalid && createEventForm.guestList.$dirty, 'has-success': createEventForm.guestList.$valid && createEventForm.guestList.$dirty }">
+	      				<div class="form-group" ng-class="{ 'has-error' : createEventForm.guestlist.$invalid && createEventForm.guestlist.$dirty, 'has-success': createEventForm.guestlist.$valid && createEventForm.guestlist.$dirty }">
 			      			<label for="guestlist">Who's invited? (Separate names with commas)</label>
-			      			<textarea name="guestlist" id="guestlist" cols="30" rows="10" placeholder="John Doe, Jane Doe, Joe Doe" class="guestlist form-control" cols="40" ng-model="event.guesList" required></textarea>
-			      			<div ng-messages="createEventForm.guestList.$error" ng-show="createEventForm.guestList.$touched">
+			      			<textarea name="guestlist" id="guestlist" cols="30" rows="10" placeholder="John Doe, Jane Doe, Joe Doe" class="guestlist form-control" cols="40" ng-model="event.guestlist" required></textarea>
+			      			<div ng-messages="createEventForm.guestlist.$error" ng-show="createEventForm.guestlist.$touched">
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      			</div>				      			
 			      		</div>
