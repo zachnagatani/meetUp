@@ -7,7 +7,7 @@ This is part of Udacity's Senior Web Developer Nanodegree, and is meant to enfor
 2. Run `npm install` (this may take awhile... be patient!)
 3. Run `bower install`
 4. Run `gulp serve` to serve development files
-5. Run `gulp build` and then `gulp build:dist` to run production ready files
+5. Run `gulp build` and then `gulp serve:dist` to run production ready files
 
 ### Usage
 1. Sign up (no real backend) as prompted
