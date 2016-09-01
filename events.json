@@ -4,10 +4,8 @@
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",
-	"startDate": "2012-04-23T18:25:43.511Z",
-	"endDate": "2012-04-23T18:25:43.511Z",
-	"startTime": "2012-04-23T18:25:43.511Z",
-	"endTime": "2012-04-23T18:25:43.511Z",
+	"start": "2016-09-03T22:00",
+	"end": "2016-09-03T22:00",
 	"guestlist": [],
 	"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
 }, {
@@ -16,10 +14,8 @@
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",
-	"startDate": "2012-04-23T18:25:43.511Z",
-	"endDate": "2012-04-23T18:25:43.511Z",
-	"startTime": "2012-04-23T18:25:43.511Z",
-	"endTime": "2012-04-23T18:25:43.511Z",
+	"start": "2016-09-03T22:00",
+	"end": "2016-09-03T22:00",
 	"guestlist": [],
 	"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
 }, {
@@ -28,10 +24,8 @@
 	"host": "Zach",
 	"type": "Grad Party",
 	"location": "San Jose, CA",
-	"startDate": "2012-04-23T18:25:43.511Z",
-	"endDate": "2012-04-23T18:25:43.511Z",
-	"startTime": "2012-04-23T18:25:43.511Z",
-	"endTime": "2012-04-23T18:25:43.511Z",
+	"start": "2016-09-03T22:00",
+	"end": "2016-09-03T22:00",
 	"guestlist": [],
 	"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
 }]
