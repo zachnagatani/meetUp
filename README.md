@@ -11,9 +11,8 @@ This is part of Udacity's Senior Web Developer Nanodegree, and is meant to enfor
 
 ### Usage
 1. Sign up (no real backend) as prompted
-2. Mock data is used to display the intial events.
-3. Create a new event with the link at the top of the page
-4. All events can be edited or deleted.
+2. Create a new event with the link at the top of the page
+3. Created events will be displayed, and all events can be edited or deleted.
 
 ## Viewing the App
 Go to [the github pages link](https://zachnagatani.github.io/meetUp/) for this app in order to view it.
