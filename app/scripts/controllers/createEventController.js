@@ -36,8 +36,6 @@
 				let startVal = new Date($('#start').val()).getTime();
 				let endVal = new Date($('#end').val()).getTime();
 				let now = new Date().getTime();
-				console.log(now);
-				console.log(startVal);
 
 				// If the end date's value is less than the start date's value,
 				if (endVal < startVal) {
@@ -58,7 +56,7 @@
 				} else {
 					// ensure all input error cases are now valid
 					form.end.$setValidity('endDate', true);
-					form.end.$setValidity('endDateSame', false);
+					form.end.$setValidity('endDateSame', true);
 					form.start.$setValidity('startDatePast', true);
 				}
 			};
