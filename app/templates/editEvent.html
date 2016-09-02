@@ -24,8 +24,9 @@
 	      		<div class="row row-modal">
 	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': editEventForm.type.$invalid && editEventForm.type.$dirty, 'has-success': editEventForm.type.$valid && editEventForm.type.$dirty }">
-			      			<label for="type">Type of Event</label>
-			      			<input list="type" name="type" class="type form-control" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
+			      			<label for="type">Type of Event
+			      				<input list="type" name="type" class="type form-control" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
+			      			</label>
 			      			<datalist id="type">
 			      				<option value="Birthday Party"></option>
 			      				<option value="Graduation Party"></option>
