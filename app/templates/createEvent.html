@@ -25,8 +25,8 @@
 	      			<div class="col-md-8 col-md-offset-2">
 			      		<div class="form-group" ng-class="{ 'has-error': createEventForm.type.$invalid && createEventForm.type.$dirty, 'has-success': createEventForm.type.$valid && createEventForm.type.$dirty }">
 			      			<label for="type">Type of Event</label>
-			      			<input list="type" class="type form-control" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
-			      			<datalist name="type" id="type">
+			      			<input list="type" name="type" class="type form-control" placeholder="Birthday Party, Baby Shower, etc." ng-model="event.type" required>
+			      			<datalist id="type">
 			      				<option value="Birthday Party"></option>
 			      				<option value="Graduation Party"></option>
 			      				<option value="Concert"></option>
@@ -73,6 +73,7 @@
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="date" class="text-danger">Please enter a correct date</p>
 			      				<p ng-message="time" class="text-danger">Please enter a correct time</p>
+			      				<p ng-message="startDatePast" class="text-danger">Event cannot start in the past</p>
 			      			</div>
 			      		</div>     				
 	      			</div>    			
@@ -87,7 +88,8 @@
 			      				<p ng-message="required" class="text-danger">This input is required</p>
 			      				<p ng-message="date" class="text-danger">Please enter a correct date</p>
 			      				<p ng-message="time" class="text-danger">Please enter a correct time</p>
-			      				<p ng-message="endDate" class="text-danger">End of event cannot be before start of event</p>
+			      				<p ng-message="endDateBefore" class="text-danger">End of event cannot be before start of event</p>
+			      				<p ng-message="endDateSame" class="text-danger">Event cannot end at the same time it starts</p>
 			      			</div>			   
 			      		</div>      				
 	      			</div>	      			
@@ -109,7 +111,7 @@
 	              <div class="col-md-8 col-md-offset-2">
 	                <div class="form-group">
 	                  <label for="optional">Add description?</label><br>
-	                  <input type="checkbox" name="optional" ng-click="toggleAddDescription()">
+	                  <input type="checkbox" name="optional" id="optional" ng-click="toggleAddDescription()">
 	                </div>
 	              </div>
 	            </div>

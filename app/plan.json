@@ -1,0 +1,85 @@
+"users": [
+	{
+		"name": "Zach Nagatani",
+		"username": "kittyfat101",
+		"email": "zachnagatani@gmail.com",
+		"password": "aserafsdf",
+		"events": [
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": ["Zach Nagatani", "Claire Nagatani", "James Dean"],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			},
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": [],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			},
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": [],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			}
+		]
+	}, 
+
+	{
+		"name": "Zach Nagatani",
+		"username": "kittyfat101",
+		"email": "zachnagatani@gmail.com",
+		"password": "asdadfgadsgfsd",
+		"events": [
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": [],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			},
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": [],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			},
+			{
+				"id": "1",
+				"name": "Claire's Grad",
+				"host": "Zach",
+				"type": "Grad Party",
+				"location": "San Jose, CA",
+				"start": "2016-09-03T22:00",
+				"end": "2016-09-03T22:00",
+				"guestlist": [],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum animi"
+			}
+		]
+	}
+]

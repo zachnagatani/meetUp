@@ -30,19 +30,36 @@
 
 			// When the user finishes entering a date (ng-change is used to watch),
 			function checkDate(form) {
-				// store the values of the inputs in local variables, edit
+				// store the values of the inputs in local variables, create
 				// new date objects from them for safety, and run getTime
 				// to convert them to a numerical value for comparison
 				let startVal = new Date($('#start').val()).getTime();
 				let endVal = new Date($('#end').val()).getTime();
+				let now = new Date().getTime();
+				console.log(now);
+				console.log(startVal);
 
 				// If the end date's value is less than the start date's value,
 				if (endVal < startVal) {
 					// set the end input to invalid
-					form.end.$setValidity('endDate', false);
+					form.end.$setValidity('endDateBefore', false);
+				// or if the end time is the same as the start time 
+				} else if (endVal === startVal) {
+					// set the end input to invalid
+					form.end.$setValidity('endDateSame', false);
+				// or if the start time is before the current time
+				// (25,200,000 is the number of ms in 7 hours)
+				// new Date().getTime() is converting the start
+				// input's value incorrectly, and this makes up for the error
+				} else if (startVal + 25200000 < now) {
+					// set the start input to invalid
+					form.start.$setValidity('startDatePast', false);
+				// if all is well,
 				} else {
-					// else set it to valid
+					// ensure all input error cases are now valid
 					form.end.$setValidity('endDate', true);
+					form.end.$setValidity('endDateSame', false);
+					form.start.$setValidity('startDatePast', true);
 				}
 			};
 
