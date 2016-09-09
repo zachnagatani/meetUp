@@ -39,6 +39,13 @@
 			$scope.events.splice(index, 1);
 		};
 
+		var dbPromise = idb.open('events-db', 2, function(upgradeDb) {
+			switch(upgradeDb.oldVersion) {
+				case 0:
+					var eventsStore = upgradeDb.createObjectStore('events', { keyPath: 'id'});
+			}
+		});
+
 		// Functions and properties placed on $scope for access
 		$scope.confirmDelete = confirmDelete;
 		$scope.createEvent = createEvent;
@@ -54,6 +61,26 @@
 			newEvent.id = $scope.events.length + 1;
 			// Push the newly created event onto $scope.events
 			$scope.events.push(newEvent);
+
+			dbPromise.then(function(db) {
+				var tx = db.transaction('events', 'readwrite');
+				var eventsStore = tx.objectStore('events');
+				eventsStore.put(newEvent);
+				return tx.complete;
+			});
+		});
+
+		dbPromise.then(function(db) {
+			var tx = db.transaction('events');
+			var eventsStore = tx.objectStore('events');
+			return eventsStore.getAll();
+		}).then(function(events) {
+			events.forEach(function(event) {
+				$scope.events.push(event);
+			});
+		}).then(function(){
+			console.log($scope.events);
+			$scope.$apply();
 		});
 
 		$scope.signup = function() {
